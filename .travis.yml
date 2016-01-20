@@ -4,8 +4,6 @@ addons:
     paths: [libs.zip, build.zip]
     target_paths: f1f0f249-84ba-4653-94fd-bea55072d98c
 after_success: ['mvn clean test jacoco:report coveralls:report', ./df-build.sh]
-branches:
-  only: [trunk]
 jdk: [openjdk6, openjdk7, oraclejdk8]
 language: java
 sudo: false
